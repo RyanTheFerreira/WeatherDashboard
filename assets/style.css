@@ -1,16 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
     font-family: sans-serif;
-
-}
-
-
-
-
-
-
+    }
 
 .header {
     width: 60;
@@ -23,4 +15,21 @@
     
 }
 
+.btn{
+    background-color: rgba(106, 137, 222, 0.787);
+    width:300px;
+}
+
+.searchContainer{
+    justify-content:left;
+}
+
+.cityList{
+    font-weight: bold;
+    font-size:large;
+}
+
+.card{
+    width: 300px;
+}
 
