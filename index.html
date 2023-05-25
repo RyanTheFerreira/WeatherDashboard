@@ -10,7 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <link rel="stylesheet" href="assets/style.css">
+
+
     <title>Weather Dashboard</title>
 </head>
 
@@ -20,45 +23,48 @@
             Weather Dashboard
         </h1>
     </header>
-</body>
-<!--Search for a city-->
 
-<div class="searchContainer d-flex">
-    <form class="form-inline my-2 my-lg-0">
-        <h4>Search for a city:</h4>
-        <div class="input-group mb-3">
-            <input class="form-control mr-sm-2 flex-grow-1" id="citySearch" type="search" placeholder="Search"
-                aria-label="Search">
+    <!-- Search for a city -->
+
+    <div class="searchContainer d-flex">
+        <form class="form-inline my-2 my-lg-0" id="search-form">
+            <h4>Search for a city:</h4>
+            <div class="input-group mb-3">
+                <input class="form-control mr-sm-2 flex-grow-1" id="citySearch" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <button class="btn btn-primary my-2 my-sm-0" id="citySearchBtn" type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <ul class="list-group list-group-flush" id="city-list">
+                <li class="list-group-item"></li>
+            </ul>
         </div>
-        <button class="btn btn-primary my-2 my-sm-0" id="citySearchBtn" type="submit">Search</button>
-    </form>
-</div>
-<div class="card">
-    <div class="card-body">
-        <ul class="list-group list group-flush" id="city-list">
-            <li class="list-group-item"></li>
-        </ul>
     </div>
-</div>
-<!--City history clear button-->
-<div>
-    <button class="btn btn-primary mt-3 deleteItem" type="button" id="clear-history">Clear City
-        History</button>
-</div>
-<!--weather info on current city-->
-<div class="col-sm-10 mt-3">
-    <div class="col-sm-10 mx-2" id="currentWeather">
-        <p class="cityName" id="currentCity"></p>
-        <p class="current" id="temperature"></p>
-        <p class="current" id="humidity"></p>
-        <p class="current" id="windSpeed"></p>
-        <p class="current" id="uvIndex"></p>
-    </div>
-</div>
-<!--5 day forecast-->
-<div class="row row-cols-1 row-cols-sm-10 g-4 m-2" id="forecast">
-</div>
 
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--City history clear button-->
+    <div>
+        <button class="btn btn-primary mt-3 deleteItem" type="button" id="clear-history">Clear City History</button>
+    </div>
+
+    <!--weather info on current city-->
+    <div class="col-sm-10 mt-3">
+        <div class="col-sm-10 mx-2" id="currentWeather">
+            <p class="cityName" id="currentCity"></p>
+            <p class="current" id="temperature"></p>
+            <p class="current" id="humidity"></p>
+            <p class="current" id="windSpeed"></p>
+            <p class="current" id="uvIndex"></p>
+        </div>
+    </div>
+    <!--5 day forecast-->
+    <div class="row row-cols-1 row-cols-sm-10 g-4 m-2" id="forecast">
+    </div>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/javas.js"></script>
+</body>
 
 </html>
